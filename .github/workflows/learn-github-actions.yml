@@ -13,4 +13,4 @@ jobs:
           python-version: '3.9'
 #          cache: 'pip' # caching pip dependencies
       - name: test get_function
-        run: python3 -c "import sys; print(sys.version)"
+        run: cd ./get_function && python3 unit1.py
