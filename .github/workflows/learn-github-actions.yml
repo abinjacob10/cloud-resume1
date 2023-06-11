@@ -11,9 +11,6 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-#          cache: 'pip' # caching pip dependencies
       - name: test get_function
-        run: |
-#          cd ./get_function
-          pip install pytest pytest-mock
-          python3 -m pytest tests/unit
+        run:
+          cd ./get_function && python3 unit1.py
