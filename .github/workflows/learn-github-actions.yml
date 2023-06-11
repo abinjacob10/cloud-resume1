@@ -7,11 +7,11 @@ jobs:
   check-infra:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
       - name: test get_function
         run: |
-          cd ./get_function
           pip3 install pytest pytest-mock
           python3 -m pytest tests/unit
