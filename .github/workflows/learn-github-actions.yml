@@ -15,5 +15,5 @@ jobs:
       - name: test get_function
         run: |
           cd ./get_function
-          pip3 install pytest pytest-mock
+          pip install pytest pytest-mock
           python3 -m pytest tests/unit
