@@ -12,5 +12,6 @@ jobs:
         with:
           python-version: '3.9'
       - name: test get_function
-        run:
-          cd ./get_function && python3 unit1.py
+        run: |
+          pip3 install pytest pytest-mock
+          python3 -m pytest tests/unit
