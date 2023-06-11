@@ -14,6 +14,6 @@ jobs:
 #          cache: 'pip' # caching pip dependencies
       - name: test get_function
         run: |
-          cd ./get_function
+#          cd ./get_function
           pip install pytest pytest-mock
           python3 -m pytest tests/unit
