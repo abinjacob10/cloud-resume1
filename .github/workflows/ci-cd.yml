@@ -1,8 +1,6 @@
 name: ci-cd pipeline
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
-env:
-  python: 3.9
 jobs:
   build-deploy-to-aws-cloudformation:
     runs-on: ubuntu-latest
