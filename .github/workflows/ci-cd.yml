@@ -4,6 +4,10 @@ on: [push]
 jobs:
   build-deploy-to-aws-cloudformation:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
