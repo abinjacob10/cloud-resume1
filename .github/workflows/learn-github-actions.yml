@@ -4,7 +4,7 @@ on: [push]
 env:
   python: 3.9
 jobs:
-  check-infra:
+  base-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
