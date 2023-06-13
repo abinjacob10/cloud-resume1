@@ -21,6 +21,7 @@ jobs:
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
   
   s3-bucket-contents-updated:
+    needs: build-deploy-to-aws-cloudformation
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
