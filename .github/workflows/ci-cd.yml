@@ -20,8 +20,8 @@ jobs:
           pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
       
   build-deploy-to-aws-cloudformation:
+    needs: functions-access-test
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v2
