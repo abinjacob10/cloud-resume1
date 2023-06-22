@@ -44,7 +44,9 @@ def get_handler(event, context):
     )
 
     item = response['Item']                         # returns of type dictionary
-    x=int(item['hits'])                             # converts decimal value of 'hits' to str value 
+    x=int(item['hits'])       # converts decimal value of 'hits' to int value, because json could serialize int, not decimal,
+                              # if decimal is not converted to type which JSON could serialize, we would see this error for third last line
+                              # "Object of type decimal is not JSON serializable"
     #print(item['hits'])
 
     return {
