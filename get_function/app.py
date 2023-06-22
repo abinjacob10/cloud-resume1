@@ -44,7 +44,7 @@ def get_handler(event, context):
     )
 
     item = response['Item']                         # returns of type dictionary
-    x=str(item['hits'])                             # converts decimal value of 'hits' to str value 
+    x=int(item['hits'])                             # converts decimal value of 'hits' to str value 
     #print(item['hits'])
 
     return {
