@@ -56,6 +56,6 @@ def put_handler(event, context):
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': '*'
         },
-        'body': json.dumps({ "count" : "1" })
+        'body': json.dumps({ "count" : "+1" })
     
     }
