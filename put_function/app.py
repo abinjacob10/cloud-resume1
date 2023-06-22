@@ -42,9 +42,9 @@ def put_handler(event, context):
         Key = {
                 'counts': 'hits' 
         },
-        UpdateExpression = 'ADD hits :inc',
+        UpdateExpression = 'ADD hits inc',
         ExpressionAttributeValues = {
-            ':inc': 1
+            'inc': 1
          }
 
     )
