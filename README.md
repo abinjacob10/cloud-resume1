@@ -7,6 +7,7 @@ The basics of this challenge is to host a resume written in HTML in a public clo
 
 
 **Click-operations for initial testing**
+
 At start of the project, first the front end part was tested using click-operations in Amazon Cloud.
 Resources required for  was an HTML file which is the resume, with a bit of styling done using css file.
 
