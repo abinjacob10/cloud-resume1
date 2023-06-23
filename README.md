@@ -19,21 +19,21 @@ Resources required for this was:
 
 4. A domain- Domain was registered with AWS Route 53 for $3 named it **abininireland.click**
 
-      -A type record was configured pointing to cloud front URL.
+      - A type record was configured pointing to cloud front URL.
 
 6. AWS Certificate Manager's SSL certificate.
    
-      -Required linking with Cloud front distribution's URL.
+      - Required linking with Cloud front distribution's URL.
    
-      -CNAME record was required to be copied to Route 53'S hosted zone.
+      - CNAME record was required to be copied to Route 53'S hosted zone.
 
 7. AWS Cloud Front distribution URL.
 
-      -Required linking with S3 bucket origin domain.
+      - Required linking with S3 bucket origin domain.
 
-      -Required linking with AWS Certificate Manager.
+      - Required linking with AWS Certificate Manager.
 
-      -Required linking with the resistered domain.
+      - Required linking with the resistered domain.
 
 
 
