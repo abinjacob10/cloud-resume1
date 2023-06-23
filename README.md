@@ -13,15 +13,27 @@ Resources required for this was:
 
 1. An HTML file which is the resume, with a bit of styling done using css file.
 
-2. A domain- Domain was registered with AWS Route 53 for $3 named it **abininireland.click**
+2. S3 bucket.
 
-3. AWS Certificate Manager's SSL certificate.
+      - Required public access. Actions set to **s3:GetObject**, Principal set to ***** meaning everyone is allowed access to it.
+
+4. A domain- Domain was registered with AWS Route 53 for $3 named it **abininireland.click**
+
+      -A type record was configured pointing to cloud front URL.
+
+6. AWS Certificate Manager's SSL certificate.
    
-      -Required linking with Cloud front distribution and AWS.
+      -Required linking with Cloud front distribution's URL.
    
       -CNAME record was required to be copied to Route 53'S hosted zone.
 
-5. AWS Cloud Front distribution URL.
+7. AWS Cloud Front distribution URL.
+
+      -Required linking with S3 bucket origin domain.
+
+      -Required linking with AWS Certificate Manager.
+
+      -Required linking with the resistered domain.
 
 
 
