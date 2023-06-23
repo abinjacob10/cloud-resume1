@@ -2,6 +2,7 @@
 
 This project is based on a [challenge](https://cloudresumechallenge.dev/docs/the-challenge/aws/) conceptualized by [Forrest Brazeal](https://forrestbrazeal.com/)
 
+The basics of this challenge is to host a resume written in HTML in a public cloud and show the the number of visits to the website visitors. Website counts needs to be maintained in a database and updated at every website visit. Click operation should be avoided, rather coding should be adopted to create the required Infrastructure resources(IaC-Infrastructure as Code). Finally, any change made in backend end need to be tested before re-building and deploying to public cloud using Github Actions. Any change made in front end also needs to be updated with the public cloud hosting using Github Actions.
 
 
 - hello_world - Code for the application's Lambda function.
