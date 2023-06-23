@@ -16,6 +16,8 @@ Resources required for this was:
 2. S3 bucket, named it same as the website domain: **abininireland.click**
 
       - Required public access. Actions set to **s3:GetObject**, Principal set to **"*"** meaning everyone is allowed access to the bucket.
+  
+3. Required IAM permissions for current user     
 
 4. A domain- Domain was registered with AWS Route 53 for $3 named it **abininireland.click**
 
@@ -37,6 +39,7 @@ Resources required for this was:
 
 
 
+After the front end was successfully tested. i.e. when abininireland.click was typed and entered in web browser, HTML file was visible, above configuration was moved to **AWS SAM**. Rest of the IaC was built on the sample hello-world template generated when SAM was first initialized in local Ubuntu machine.
 
 
 
