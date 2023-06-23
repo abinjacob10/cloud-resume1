@@ -1,6 +1,6 @@
 # cloud-resume1
 
-This project is based on a challenge conceptualized by Forrest Braz https://forrestbrazeal.com/
+This project is based on a challenge conceptualized by [Forrest Braz](https://forrestbrazeal.com/)
 
 - hello_world - Code for the application's Lambda function.
 - events - Invocation events that you can use to invoke the function.
