@@ -13,9 +13,9 @@ Resources required for this was:
 
 1. An HTML file which is the resume, with a bit of styling done using css file.
 
-2. S3 bucket.
+2. S3 bucket, named it same as domain: abininireland.click
 
-      - Required public access. Actions set to **s3:GetObject**, Principal set to ** /* ** meaning everyone is allowed access to it.
+      - Required public access. Actions set to **s3:GetObject**, Principal set to **"*"** meaning everyone is allowed access to the bucket.
 
 4. A domain- Domain was registered with AWS Route 53 for $3 named it **abininireland.click**
 
