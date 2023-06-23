@@ -15,7 +15,7 @@ Resources required for this was:
 
 2. S3 bucket.
 
-      - Required public access. Actions set to **s3:GetObject**, Principal set to ***** meaning everyone is allowed access to it.
+      - Required public access. Actions set to **s3:GetObject**, Principal set to **"*"** meaning everyone is allowed access to it.
 
 4. A domain- Domain was registered with AWS Route 53 for $3 named it **abininireland.click**
 
