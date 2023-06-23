@@ -1,4 +1,4 @@
-# cloud-resume
+# Cloud Resume Challenge
 
 This project is based on a [challenge](https://cloudresumechallenge.dev/docs/the-challenge/aws/) conceptualized by [Forrest Brazeal](https://forrestbrazeal.com/)
 
