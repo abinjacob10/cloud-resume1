@@ -5,15 +5,13 @@ This project is based on a [challenge](https://cloudresumechallenge.dev/docs/the
 The basics of this challenge is to host a resume written in HTML in a public cloud and show the the number of visits to the website visitors. Website counts need to be maintained in a database and updated at every website visit. Click operation should be avoided, rather coding should be adopted to create the required Infrastructure resources(IaC-Infrastructure as Code). Finally, any change made in backend end need to be tested before re-building and deploying to public cloud using Github Actions. Any change made in front end also needs to be updated with the public cloud hosting using Github Actions.
 
 
-- hello_world - Code for the application's Lambda function.
-- events - Invocation events that you can use to invoke the function.
-- tests - Unit tests for the application code. 
-- template.yaml - A template that defines the application's AWS resources.
 
-The application uses several AWS resources, including Lambda functions and an API Gateway API. These resources are defined in the `template.yaml` file in this project. You can update the template to add AWS resources through the same deployment process that updates your application code.
+**Click-operations for initial testing**
+At start of the project, first the front end part was tested using click-operations in Amazon Cloud.
+Resources required for  was an HTML file which is the resume, with a bit of styling done using css file.
 
-If you prefer to use an integrated development environment (IDE) to build and test your application, you can use the AWS Toolkit.  
-The AWS Toolkit is an open source plug-in for popular IDEs that uses the SAM CLI to build and deploy serverless applications on AWS. The AWS Toolkit also adds a simplified step-through debugging experience for Lambda function code. See the following links to get started.
+
+
 
 * [CLion](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
 * [GoLand](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
