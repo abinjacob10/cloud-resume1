@@ -16,8 +16,10 @@ Resources required for this was:
 2. A domain- Domain was registered with AWS Route 53 for $3 named it **abininireland.click**
 
 3. AWS Certificate Manager's SSL certificate.
-      Required linking with Cloud front distribution and AWS.
-      CNAME record was required to be copied to Route 53'S hosted zone.
+   
+      -Required linking with Cloud front distribution and AWS.
+   
+      -CNAME record was required to be copied to Route 53'S hosted zone.
 
 5. AWS Cloud Front distribution URL.
 
