@@ -13,7 +13,7 @@ Resources required for this was:
 
 1. An HTML file which is the resume, with a bit of styling done using css file.
 
-2. S3 bucket, named it same as the website domain: **abininireland.click**
+2. S3 bucket, named it same as the website domain **abininireland.click** and hosted it in eu-west-1(Ireland) region.
 
       - Required public access. Actions set to **s3:GetObject**, Principal set to **"*"** meaning everyone is allowed access to the bucket.
   
@@ -39,7 +39,7 @@ Resources required for this was:
 
 
 
-After the front end was successfully tested. i.e. when abininireland.click was typed and entered in web browser, HTML file was visible, above configuration was moved to **AWS SAM**. Rest of the IaC was built on the sample hello-world template generated when SAM was first initialized in local Ubuntu machine.
+After the front end was successfully tested. i.e. when abininireland.click was typed and entered in web browser, HTML file was visible, above configuration was moved to **AWS SAM**. Rest of the IaC was built on the sample hello-world template generated when SAM was first initialized in local Ubuntu machine. Before building and deploying from AWS SAM, AWS IAM was configured for various accesses for present user who is configured to access resources in AWS using AWS SAM: S3, CloudFront, Route 53, Cloudformation, AWS Certificate Manager, Lambda functions and API gateways.
 
 
 
