@@ -10,6 +10,7 @@ The basics of this challenge is to host a resume written in HTML in a public clo
 
 During initial phase, first the front end part was tested using click-operations in Amazon Cloud.
 Resources required for this was:
+
 1.an HTML file which is the resume, with a bit of styling done using css file.
 2.A domain- A domain was registered with AWS Route 53 for $3 named it abininireland.click :)
 
