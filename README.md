@@ -39,5 +39,8 @@ Resources required for this was:
 
 
 
-After the front end was successfully tested. i.e. when abininireland.click was typed and entered in web browser, HTML file was visible, above configuration was moved to **AWS SAM**. Rest of the IaC was built on the sample hello-world **YAML** template generated when SAM was first initialized in local Ubuntu machine. Before building and deploying from AWS SAM, AWS IAM was configured for various accesses for present user who is configured to access resources in AWS using AWS SAM: S3, CloudFront, Route 53, Cloudformation, AWS Certificate Manager, Lambda functions and API gateways.
+After the front end was successfully tested. i.e. when abininireland.click was typed and entered in web browser, HTML file was visible, above configuration was moved to **AWS SAM**. **Rest of the IaC was built on the sample hello-world **YAML** template generated when SAM was first initialized in local Ubuntu machine**. Before building and deploying from AWS SAM, IAM for the SAM user was configured to grant permissions for: S3, CloudFront, Route 53, Cloudformation, AWS Certificate Manager, Lambda functions and API gateways.
+
+Two separate Lambda functions are used to make update and get count from DynamoDB table. Each lambda is triggered by its own API named (https://jc5qyxzdo8.execute-api.eu-west-1.amazonaws.com/Prod/get)
+
 
