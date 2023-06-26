@@ -9,7 +9,7 @@ The basics of this challenge is to host a resume written in HTML in a public clo
 **Click-operations for initial testing**
 
 During initial phase, first the front end part was tested using click-operations in Amazon Cloud.
-Resources required for this was:
+Resources required for this were:
 
 1. An HTML file which is the resume, with a bit of styling done using css file.
 
@@ -43,8 +43,9 @@ After the front end was successfully tested. i.e. when abininireland.click was t
 
 - Two separate Lambda functions are used to update and get count from DynamoDB table. Each lambda function is invoked by its own API. For "get_function" Lambda function, API trigger is (https://jc5qyxzdo8.execute-api.eu-west-1.amazonaws.com/Prod/get). For "put_function"(updates the count) Lambda function API trigger is (https://jc5qyxzdo8.execute-api.eu-west-1.amazonaws.com/Prod/put).
 
-- A java script in S3 bucket embedded in the main index.html file carries the code to fetch the responses from API's using fetch() method.
-The response from Lambda to API calls made from browser do takes care of CORS(Cross Origin Resource Sharing- which is used to allow client requests coming from a different origin than the server's origin, in this example: web-browser and lambda are in two different origins) CORS headers returned from each lambda are: access-control-allow-origin:*,access-control-allow-headers:*,access-control-allow-methods:*.
+- A java script in S3 bucket embedded in the index.html file carries the code to fetch the responses from API's using fetch() method. The fetch calls returns promise object, the promise is used to make a subsequent get fetch call which returns back with another promise. This returned data is converted into JSON object and finally only the count value is updated in HTML file using document.getElementById() method.
+  
+- The response from Lambda to API calls made from browser do takes care of CORS(Cross Origin Resource Sharing- which is used to allow client requests coming from a different origin than the server's origin, in this example: web-browser and lambda are in two different origins) CORS headers returned from each lambda are: access-control-allow-origin:*,access-control-allow-headers:*,access-control-allow-methods:*.
 
 - GitHub Actions is used to streamline code with CI/CD for both front end and backend code. GitHub Actions is trigerred whenever a push is made from local repository. First job performed is a unit test on put_function. This unit test is only a function accessibility test, not using the pytest. After test passes, second job starts which is dependent on the first job. Second job builds the SAM template configured code which includes all of our resources mentioned so far and deploys it to AWS. If there is any commited change, same becomes visible in AWS Cloud Formation. Finally the last job in GitHub Actions is again a sequence of second job and is dependent on second job. Final job is to sync the contents of  local directory in which resume file(index.html), styling(css1.css) and the java script(api.js) is compared with AWS S3 bucket. Any file not present in local repository is deleted from S3 bucket.
 
