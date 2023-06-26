@@ -43,7 +43,7 @@ After the front end was successfully tested. i.e. when abininireland.click was t
 
 - Two separate Lambda functions are used to update and get count from DynamoDB table. Each lambda function is invoked by its own API. For "get_function" Lambda function, API trigger is (https://jc5qyxzdo8.execute-api.eu-west-1.amazonaws.com/Prod/get). For "put_function"(updates the count) Lambda function API trigger is (https://jc5qyxzdo8.execute-api.eu-west-1.amazonaws.com/Prod/put).
 
-- A java script in S3 bucket embedded in the index.html file carries the code to fetch the responses from API's using fetch() method. The fetch calls returns promise object, the promise is used to make a subsequent get fetch call which returns back with another promise. This returned data is converted into JSON object and finally only the count value is updated in HTML file using document.getElementById() method.
+- A java script in S3 bucket embedded in the index.html file carries the code to fetch the responses from API's using fetch() method. First fetch call returns a promise object, this promise is used to make a subsequent get fetch call which returns back with another promise. This returned data is converted into JSON object and finally only the count value is updated in HTML file using document.getElementById() method.
   
 - The response from Lambda to API calls made from browser do takes care of CORS(Cross Origin Resource Sharing- which is used to allow client requests coming from a different origin than the server's origin, in this example: web-browser and lambda are in two different origins) CORS headers returned from each lambda are: access-control-allow-origin:*,access-control-allow-headers:*,access-control-allow-methods:*.
 
