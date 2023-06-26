@@ -2,7 +2,7 @@
 
 This project is based on a [challenge](https://cloudresumechallenge.dev/docs/the-challenge/aws/) conceptualized by [Forrest Brazeal](https://forrestbrazeal.com/)
 
-The basics of this challenge is to host a resume written in HTML in a public cloud and show the the number of visits to the website visitors. Website counts need to be maintained in a database and updated at every website visit. Click operation should be avoided, rather coding should be adopted to create the required Infrastructure resources(IaC-Infrastructure as Code). Finally, any change made in backend end need to be tested before re-building and deploying to public cloud using Github Actions. Any change made in front end also needs to be updated with the public cloud hosting using Github Actions.
+The basics of this challenge is to host a resume written in HTML in a public cloud and show the the number of visits to the website visitors. Website counts need to be maintained in a database and updated at every website visit. Click operation should be avoided, rather coding should be adopted to create the required Infrastructure resources(IaC-Infrastructure as Code). Finally, any change made in backend need to be tested before re-building and deploying to public cloud using Github Actions. Any change made in front end also needs to be updated with the public cloud hosting using Github Actions.
 
 
 
@@ -39,7 +39,7 @@ Resources required for this were:
 
 
 
-After the front end was successfully tested. i.e. when abininireland.click was typed and entered in web browser, HTML file was visible, above configuration was moved to **AWS SAM**. **Rest of the IaC was built on the sample hello-world **YAML** template generated when SAM was first initialized in local Ubuntu machine**. Before building and deploying from AWS SAM, IAM for the SAM user was configured to grant permissions for: S3, CloudFront, Route 53, Cloudformation, AWS Certificate Manager, Lambda functions and API gateways.
+Front end was successfully tested. Success means, visiting abininireland.com in a browser URL tab from anywhere in the world shows the resume written in HTML. Till now there was no count feature added. All of the above shown configuration was moved to **AWS SAM**. **Rest of the IaC was built on the sample hello-world **YAML** template generated when SAM was first initialized in local Ubuntu machine**. Before building and deploying from AWS SAM, IAM for the SAM user was configured to grant permissions for: S3, CloudFront, Route 53, Cloudformation, AWS Certificate Manager, Lambda functions and API gateways.
 
 - Two separate Lambda functions are used to update and get count from DynamoDB table. Each lambda function is invoked by its own API. For "get_function" Lambda function, API trigger is (https://jc5qyxzdo8.execute-api.eu-west-1.amazonaws.com/Prod/get). For "put_function"(updates the count) Lambda function API trigger is (https://jc5qyxzdo8.execute-api.eu-west-1.amazonaws.com/Prod/put).
 
